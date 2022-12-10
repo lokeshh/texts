@@ -1,13 +1,14 @@
 import json
 
-start_page = 801
-end_page = 877
-f = open(f'testoutput-{start_page}-to-{end_page}.json')
+start_page = 401
+end_page = 414
+path_prefix = 'bn-pandit/atmavilas'
+f = open(f'{path_prefix}/raw/outputoutput-{start_page}-to-{end_page}.json')
 data = json.load(f)
 
 page_no = start_page
 
-out_f = open(f'{start_page}-{end_page}.txt', 'w')
+out_f = open(f'{path_prefix}/{start_page}-{end_page}.txt', 'w')
 final_text = ''
 
 for page in data['responses']:
